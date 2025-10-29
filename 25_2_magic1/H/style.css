@@ -1,0 +1,35 @@
+::before,
+::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: #fff78b;
+}
+
+#a {
+  padding: 3px;
+  background-color: #644ca3;
+  color: #fff78b;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.b {
+  color: #644ca3;
+  font-size: 15px;
+  font-weight: bold;
+  padding-top: 10px;
+}
+
+.c {
+  color: black;
+  font-size: 24px;
+  font-weight: bolder;
+}
+
+.text {
+  color: black;
+  font-weight: normal;
+  font-size: 18px;
+  border-bottom: 1px solid #644ca3;
+}

@@ -1,0 +1,41 @@
+::before,
+::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: oklch(80% 0.03 250);
+  text-align: center;
+  margin: 100px;
+}
+
+div {
+  font-size: 15;
+}
+
+.a1 {
+  color: black;
+  font-weight: bold;
+  font-size: 30px;
+  border-bottom: 1px solid black;
+  padding-bottom: 5px;
+}
+
+.b1 {
+  background-color: white;
+  color: oklch(45% 0.1 250);
+  font-weight: bold;
+  font-size: 20px;
+  border-radius: 10px;
+  padding: 30px;
+  margin-top: 30px;
+}
+
+.c1 {
+  color: black;
+  font-weight: normal;
+  font-size: 15px;
+  padding-top: 20px;
+}
