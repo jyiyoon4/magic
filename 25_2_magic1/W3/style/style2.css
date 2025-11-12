@@ -1,0 +1,88 @@
+body {
+  max-width: 1200px;
+}
+
+.section {
+  background-color: rgb(190, 239, 241);
+  padding: 20px 20px 10px 20px;
+  margin-inline: 20px;
+}
+
+.container {
+  background-color: rgb(212, 237, 172);
+}
+
+/* 수 계산할 때 쓸 수 있. px 말고 다른 거 섞기도 ㄱㄴ */
+.clac {
+  width: calc(100%-120px);
+}
+
+/* 얘도 섞기 ㄱㄴ */
+/* vw : 비례로 계산하는 단위 */
+.clamp {
+  width: clamp(300px, 50%, 500px); /*최소,중간,최대*/
+}
+
+/* 최소값 */
+.min {
+  width: min(50%, 500px); /*화면 작아질때 50% 유지, 아무리 커져도 500px*/
+}
+
+.max {
+  width: max(300px, 50%); /*작아져도 300px 이하, 커질때 50%로*/
+}
+
+.grid {
+  display: grid;
+}
+
+.minmax {
+  grid-template-columns: minmax(300px, 500px); /*최소, 최대*/
+}
+
+.item {
+  background-color: rgb(255, 205, 219);
+  padding: 30px;
+}
+
+/* 같 비율 여러개 */
+.repeat {
+  /* grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); */
+  /*ㄴ내용에 맞춰서 최소값 줌//200px의 1fr 비율*/
+  grid-template-columns: repeat(3, 1fr); /*1fr 비율로 3개*/
+  gap: 20px;
+}
+
+/* 안에 들어가는 크기 여러가지 */
+.fit-content {
+  grid-template-columns:
+    fit-content(100px)
+    fit-content(400px);
+  gap: 20px;
+}
+
+/* 임의 이름으로 색 지정 */
+:root {
+  --primary-color: oklch(80% 0.2 50);
+  --secondary-color: oklch(80% 0.2 200);
+  --triary-color: oklch(80% 0.2 30);
+  --quaternary-colo: oklch(80% 0.2 150);
+}
+
+h4 {
+  color: var(--primary-color); /*컬러 이름 임의로 줌*/
+}
+
+p {
+  color: var(--secondary-color);
+}
+
+.orange {
+  color: var(--triary-color);
+}
+
+span {
+  color: var(--quaternary-color);
+}
+
+/* 프라이머리-포인트(ex.브랜드컬러)로 많이 사용 */

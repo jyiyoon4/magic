@@ -1,0 +1,205 @@
+::before ::after {
+  box-sizing: border-box;
+}
+
+body {
+  max-width: 800px;
+  margin-inline: auto;
+}
+
+h1 {
+  text-align: center;
+}
+
+h2 {
+  margin-block: 10px 10px;
+}
+
+h3 {
+  margin-block: 0px 10px;
+}
+
+.green {
+  background-color: green;
+}
+
+.container {
+  background-color: oklch(90% 0.05 200);
+  padding-inline: 20px;
+  margin-bottom: 40px;
+}
+
+.item {
+  border: 2px solid oklch(60% 0.05 30);
+  background-color: oklch(90% 0.05 30);
+  padding: 10px;
+}
+
+.flex {
+  display: flex;
+}
+
+.dir {
+  flex-direction: column-reverse; /* 역순정렬 */
+}
+
+.order-1 {
+  order: 1; /* 순서 지정 */
+}
+
+.order-2 {
+  order: 2;
+}
+
+.order-3 {
+  order: 3;
+}
+
+.order-4 {
+  order: 4;
+}
+
+.order-5 {
+  order: 5;
+}
+
+.wrap {
+  flex-wrap: wrap; /* 요소들이 컨테이너 범위 넘어가면 다음 줄로 내리게 하는 거 */
+}
+
+.ac {
+  align-content: center;
+}
+
+.h300 {
+  height: 300px;
+}
+
+.w100 {
+  width: 100px;
+}
+
+.ai {
+  align-items: center;
+  /* 각 아이템들 중앙에 */
+}
+
+.as-1 {
+  align-self: start;
+}
+.as-2 {
+  align-self: center;
+}
+.as-3 {
+  align-self: end;
+}
+.as-4 {
+  align-self: stretch;
+  /* 컨테이너 끝부분에 정렬 */
+}
+.as-5 {
+  align-self: baseline;
+  /* 기준 선에 정렬 */
+}
+
+.gap {
+  gap: 10px;
+  /* 아이템들 사이 띄워주는 공간.간격 */
+}
+
+.jc {
+  justify-content: space-between;
+  /* 아이템들 사이 균등 간격. 전체 비율 갖고. */
+}
+
+.grow-1 {
+  flex-grow: 1;
+  /* 아이템의 남은 공간을 균등하게 주도록 설정 */
+}
+
+.grow-2 {
+  flex-grow: 2;
+}
+
+.shrink-1 {
+  width: 200px;
+  flex-shrink: 1;
+}
+
+.shrink-2 {
+  width: 200px;
+  flex-shrink: 2;
+}
+
+.basis-1 {
+  flex-basis: 300px;
+  /* 아이템 기본 크기 고정 */
+}
+
+.basis-2 {
+  flex-basis: 0;
+}
+
+.grid {
+  display: grid;
+}
+
+.gtc {
+  grid-template-columns: 1fr 2fr 1fr 1fr 1fr;
+}
+
+.gtr {
+  grid-template-rows: 1fr 2fr 1fr 1fr 1fr;
+}
+/* row>> 가로줄
+columns>> 세로줄 */
+
+.gtr-1fr {
+  grid-template-rows: repeat(5, 1fr);
+  /* repeat(5, 1fr) 1fr을 5개 */
+}
+
+.gtc-1fr {
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+}
+
+.gtc-100 {
+  grid-template-columns: 100px 100px 100px 100px 100px;
+}
+
+.gc-gr {
+  grid-column: 2/4; /* 2번째칸~4번째칸까지 있 */
+  grid-row: 3/6;
+}
+
+.ga {
+  grid-area: 3/2/6/4;
+  /* r/c/r/c */
+}
+
+.ji {
+  justify-items: center;
+}
+
+.js-s {
+  justify-self: start;
+}
+.js-c {
+  justify-self: center;
+}
+.js-e {
+  justify-self: end;
+}
+.js-str {
+  justify-self: stretch;
+  /* 스트레치>첨부터끝까지 늘려서 있는 거 */
+}
+
+.subgrid {
+  grid-area: 3/1/6/4;
+
+  display: grid;
+
+  grid-template-columns: subgrid;
+  grid-template-rows: subgrid;
+}

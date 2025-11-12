@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style/style.css" />
+    <title>Flex</title>
+  </head>
+  <body>
+    <h1>Flex</h1>
+    <h2>No Flex</h2>
+    <div class="container">
+      <div class="item">item1</div>
+      <div class="item">item2</div>
+      <div class="item">item3</div>
+      <div class="item">item4</div>
+      <div class="item">item5</div>
+    </div>
+    <div class="container">
+      <div class="item">Lorem.</div>
+      <div class="item">Lorem ipsum dolor sit amet.</div>
+      <div class="item">
+        > Lorem ipsum, dolor sit amet consectetur adipisicing elit. Officiis,
+        illo.
+      </div>
+      <div class="item">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio
+        ullam quasi fuga repellat saepe reiciendis.
+      </div>
+      <div class="item">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex quisquam
+        unde ratione aliquam quis consequuntur porro possimus dolorem velit
+        iste.
+      </div>
+    </div>
+    <h2 class="purple">Default</h2>
+    <div class="container flex">
+      <div class="item">item1</div>
+      <div class="item">item2</div>
+      <div class="item">item3</div>
+      <div class="item">item4</div>
+      <div class="item">item5</div>
+    </div>
+    <div class="container flex">
+      <div class="item">Lorem.</div>
+      <div class="item">Lorem ipsum dolor sit amet.</div>
+      <div class="item">
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Officiis,
+        illo.
+      </div>
+      <div class="item">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio
+        ullam quasi fuga repellat saepe reiciendis.
+      </div>
+      <div class="item">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex quisquam
+        unde ratione aliquam quis consequuntur porro possimus dolorem velit
+        iste.
+      </div>
+    </div>
+    <h2 class="purple">flex-direction</h2>
+    <div class="container flex dir">
+      <div class="item">item1</div>
+      <div class="item">item2</div>
+      <div class="item">item3</div>
+      <div class="item">item4</div>
+      <div class="item">item5</div>
+    </div>
+    <h2 class="orange">order</h2>
+    <div class="container flex">
+      <div class="item order-2">order2</div>
+      <div class="item order-5">order5</div>
+      <div class="item order-4">order4</div>
+      <div class="item order-3">order3</div>
+      <div class="item order-1">order1</div>
+    </div>
+    <h2 class="purple">wrap</h2>
+    <div class="container flex wrap">
+      <div class="item">Lorem.</div>
+      <div class="item">Lorem ipsum dolor sit amet.</div>
+      <div class="item">
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Officiis,
+        illo.
+      </div>
+      <div class="item">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio
+        ullam quasi fuga repellat saepe reiciendis.
+      </div>
+      <div class="item">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex quisquam
+        unde ratione aliquam quis consequuntur porro possimus dolorem velit
+        iste.
+      </div>
+    </div>
+    <h2 class="purple">align-content (+wrap)</h2>
+    <div class="container flex wrap ac h300">
+      <div class="item">Lorem.</div>
+      <div class="item">Lorem ipsum dolor sit amet.</div>
+      <div class="item">
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Officiis,
+        illo.
+      </div>
+      <div class="item">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio
+        ullam quasi fuga repellat saepe reiciendis.
+      </div>
+      <div class="item">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex quisquam
+        unde ratione aliquam quis consequuntur porro possimus dolorem velit
+        iste.
+      </div>
+    </div>
+    <h2 class="purple">align-items</h2>
+    <div class="container flex ai h300">
+      <div class="item">Lorem.</div>
+      <div class="item">Lorem ipsum dolor sit amet.</div>
+      <div class="item">
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Officiis,
+        illo.
+      </div>
+      <div class="item">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio
+        ullam quasi fuga repellat saepe reiciendis.
+      </div>
+      <div class="item">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex quisquam
+        unde ratione aliquam quis consequuntur porro possimus dolorem velit
+        iste.
+      </div>
+    </div>
+    <h2 class="orange">align-self</h2>
+    <div class="container flex h300">
+      <div class="item as-1">start</div>
+      <div class="item as-2">center</div>
+      <div class="item as-3">end</div>
+      <div class="item as-4">stretch</div>
+      <div class="item as-5">baseline</div>
+    </div>
+    <h2>gap</h2>
+    <div class="container flex gap">
+      <div class="item">item1</div>
+      <div class="item">item2</div>
+      <div class="item">item3</div>
+      <div class="item">item4</div>
+      <div class="item">item5</div>
+    </div>
+    <h2>justify-content</h2>
+    <div class="container flex jc">
+      <div class="item">item1</div>
+      <div class="item">item2</div>
+      <div class="item">item3</div>
+      <div class="item">item4</div>
+      <div class="item">item5</div>
+    </div>
+    <h2>flex-grow</h2>
+    <div class="container flex">
+      <div class="item grow-1">item1</div>
+      <div class="item grow-2 green">item2</div>
+      <div class="item grow-1">item3</div>
+      <div class="item grow-1">item4</div>
+      <div class="item grow-1">item5</div>
+    </div>
+    <h2>flex-shrink</h2>
+    <div class="container flex">
+      <div class="item shrink-1">item1</div>
+      <div class="item shrink-2">item2</div>
+      <div class="item shrink-1">item3</div>
+      <div class="item shrink-1">item4</div>
+      <div class="item shrink-1">item5</div>
+    </div>
+    <h2>flex-basis</h2>
+    <div class="container flex">
+      <div class="item basis-1">item1</div>
+      <div class="item basis-2">item2</div>
+      <div class="item basis-1">item1</div>
+      <div class="item basis-1">item1</div>
+      <div class="item basis-1">item1</div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,89 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  padding: 16px;
+  background: #f4f4f4;
+  bottom: 1px solid #ddd;
+}
+header h1 {
+  margin: 0;
+  font-size: 20px;
+}
+.container {
+  padding: 40px;
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+.btn {
+  padding: 10px 20px;
+  font-size: 15px;
+  font-weight: 500;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+  transition: background 0.2s, box-shadow 0.2s, transform 0.1s /*0.1초*/;
+  color: #fff;
+}
+.btn.primary {
+  background: #8652f7;
+}
+/* hover: 마우스를 위에 올렸을 때 스타일 일시 적용*/
+.btn.primary:hover:not(:disabled) {
+  background: #aa8aee;
+}
+/* 클릭하면 크기 축소 ㄱ */
+.btn.primary:active:not(:disabled) {
+  transform: scale(0.97); /*1이 기본크기*/
+}
+.btn.secondary {
+  background: #6b6b6b;
+}
+.btn.secondary:hover:not(:disabled) {
+  background: #282828;
+}
+.btn.outline {
+  background: transparent;
+  border: 2px solid #2bd369;
+  color: #56da87;
+}
+.btn.outline:hover:not(:disabled) {
+  background: #2bd369;
+  color: #fff;
+}
+.btn.danger {
+  background: #ff2828;
+}
+.btn.danger:hover:not(:disabled) {
+  background: #7b0000;
+}
+.btn:disabled {
+  background: #ddd;
+  color: #6b6b6b;
+  cursor: not-allowed; /* 마우스 올리면 금지표시 커서 됨 */
+}
+.btn.shadow {
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+.btn.shadow:hover:not(:disabled) {
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.25);
+}
+.btn.round {
+  border-radius: 50px;
+  padding: 10px 28px;
+}
+.btn.gradient {
+  background: linear-gradient(135deg, #8652f7, #aa8aee);
+}
+.btn.gradient:hover:not(:disabled) {
+  background: linear-gradient(135deg, #7f65b9, #4d279f);
+}

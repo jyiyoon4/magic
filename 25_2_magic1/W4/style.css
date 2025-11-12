@@ -1,0 +1,126 @@
+*::before *::after {
+  box-sizing: border-box;
+}
+
+.page-header {
+  position: sticky; /*헤더 스크롤 해도 고정*/
+  top: 0;
+  padding: 16px 20px;
+  background: #fff;
+  border-bottom: 1px solid #ddd;
+  z-index: 10; /* 요소를 위로 올림 */
+}
+
+/* <h1>CSS Position 속성 예제</h1> 이거 바꿈ㄱ */
+.page-header h1 {
+  margin: 0 0 4px;
+  font-size: 20px;
+}
+
+.page-header p {
+  margin: 0;
+  color: #666;
+}
+
+.section {
+  padding: 40px 20px 80px;
+  border-bottom: 1px dashed #e4e4e4;
+}
+
+.section h2 {
+  margin: 0 0 16px;
+}
+
+.flow {
+  display: flex;
+  gap: 12px;
+  align-items: flex-start;
+  flex-wrap: wrap; /*요소가 컨테이너 넘어가면 다음 줄 가게*/
+}
+
+.box {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center; /*가로중앙정렬*/
+  width: 200px;
+  height: 200px;
+  color: #fff;
+  background-color: oklch(0.65 0.1 250);
+  border-radius: 8px;
+  font-weight: bold;
+}
+
+.relative {
+  position: relative;
+  top: 30px;
+  left: 30px;
+  background-color: blue;
+}
+
+.abs-wrap {
+  position: relative;
+  padding: 16px;
+  border: 2p solid #ddd;
+  border-radius: 8px;
+  background: #e4e4e4;
+  display: flex;
+  gap: 12px;
+  align-items: flex-start; /*요소 정렬*/
+  flex-wrap: wrap;
+  min-height: 280px; /*최소 높이*/
+}
+
+.absolute {
+  position: absolute; /*좌표(top left...)값 줘서 위치 지정*/
+  top: 30px;
+  left: 30px;
+  background-color: blue;
+}
+
+.filler {
+  margin: 16px 0;
+  min-height: 48px;
+  background-color: #e4e4e4;
+}
+
+.fixed {
+  position: fixed;
+  right: 16px; /*오른쪽에서 16*/
+  bottom: 16px; /*아래에서 16*/
+  width: 200px;
+  height: 200px;
+  z-index: 999; /*다른 요소보다 맨 위에 표시*/
+  background-color: blue;
+}
+
+.sticky-wrap {
+  position: relative;
+  display: grid;
+  grid-template-columns: 220px 1fr;
+  gap: 16px;
+  min-height: 800px;
+  border: 2px solid #ddd;
+  border-radius: 8px;
+  padding: 16px;
+  overflow: auto; /*안에 매용 많을때 스크롤 가능하게*/
+  max-height: 60vh;
+  background-color: #e4e4e4;
+}
+
+.sticky {
+  position: sticky;
+  top: 16px;
+  align-self: start; /*맨위에*/
+  background-color: blue;
+}
+
+/*sticky-content 중에서 p 태그에만 줌*/
+.sticky-content p {
+  margin: 0 0 16px;
+}
+
+.page-footer {
+  padding: 60px 20px 120px;
+  color: #666;
+  text-align: center;
+}
