@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>변수</title>
+    <!-- jQuery -->
+    <script
+      src="https://code.jquery.com/jquery-3.7.1.min.js"
+      ;
+      integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+  </head>
+  <body>
+    <span class="badge bg-dark">Dark 🔄</span>
+
+    <script>
+      var count = 0;
+      $('.badge').on('click', function () {
+        count = count + 1;
+
+        //홀검 짝백
+        if (count % 2 == 1) {
+          $('body').css('backgroundcolor', 'black');
+        } else {
+          $('body').css('backgroundcolor', 'white');
+        }
+      });
+
+      var varient1 = 'value';
+      let varient2 = 'value';
+      const varient3 = 'value';
+    </script>
+  </body>
+</html>

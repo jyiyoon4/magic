@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>동적 UI 1</title>
+    <link rel="stylesheet" href="/lectures/level_1/1-2.css" />
+  </head>
+  <body>
+    <div class="alert-box" id="alert">알림창
+    <button onclick="controlAlert('none')">닫기</button></div>
+    <button onclick="controlAlert('block')">열기</button>
+    <!-- onclick: 버튼 누르면 코드 실행 -->
+    <script>
+      // function closeAlert() {
+      //   document.getElementById('alert').style.display = 'none';
+      // }
+      // function openAlert() {
+      //   document.getElementById('alert').style.display = 'block';
+      // }
+      function controlAlert(show) {
+        document.getElementById('alert').style.display = show;
+      }
+    </script>
+  </body>
+</html>

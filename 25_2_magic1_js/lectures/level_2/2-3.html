@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>regex</title>
+  </head>
+  <body>
+    <script>
+      // console.log("abcde".includes("ae"))//ae 안 붙어 잇으니 F
+      console.log(/a/.test('abcde'));
+      console.log(/[a-zA-Z]/.test('abcdeFGH가아')); //T
+      console.log(/\S/.test('.')); //아무 문자
+      console.log(/\S+/.test('abcde')); //아무 글자가 여러개 있는지
+      console.log(/\S+@\S\.\S+/.test('sjhjhj@jhsjhj.ㅜㄷㅅ'));
+    </script>
+  </body>
+</html>

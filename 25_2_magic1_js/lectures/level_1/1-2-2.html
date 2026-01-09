@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>동적 UI 1</title>
+    <link rel="stylesheet" href="/lectures/level_1/1-2.css" />
+  </head>
+  <body>
+    <div class="alert-box" id="alert">
+      <p id="alert-text">알림창</p>
+      <button id="close">닫기</button>
+    </div>
+    <button onclick="controlAlert('block', '아이디를 입력하세요')">
+      아이디
+    </button>
+    <button onclick="controlAlert('block', '비번을 입력하세요')">
+      비밀번호
+    </button>
+    <script>
+      document.getElementById('close').addEventListener('click', function () {
+        document.getElementById('alert').style.display = 'none';
+      });
+
+      function controlAlert(display, content) {
+        document.getElementById('alert').style.display = display;
+        document.getElementById('alert-text').innerHTML = content;
+      }
+    </script>
+  </body>
+</html>
