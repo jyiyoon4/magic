@@ -39,9 +39,14 @@
       // }
 
       var count = 5;
-      setTimeout(function () {
+      var timer = setInterval(function () {
         count--;
+        console.log(count);
         $('span').html(count);
+
+        if (count === 0) {
+          clearInterval(timer);
+        }
       }, 1000);
 
       setTimeout(function () {
