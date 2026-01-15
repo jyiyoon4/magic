@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>array/for 실습</title>
+    <!-- jQuery -->
+    <script
+      src="https://code.jquery.com/jquery-3.7.1.min.js"
+      ;
+      integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+  </head>
+
+  <body>
+    <script>
+      //1
+      const rollBook = [
+        '제헌',
+        '영민',
+        '현민',
+        '채이',
+        '수빈',
+        '지현',
+        '현서',
+        '은별',
+        '지윤',
+        '시현',
+      ];
+      var attendance = ['제헌', '영민', '현민', '수빈', '지현', '지윤']; // 온 사람들 이름 넣기
+
+      // 출석부에 있는 이름을 전부 체크해서
+      // 있을 경우 "이름: 네!" 출력
+      // 없는 경우 "이름: ..." 출력
+      // 배열에 특정 값이 있는지 확인은 arr.includes("value") 사용
+
+      rollBook.forEach(function (a, i) {
+        if (attendance.includes(rollBook[i]) == true) {
+          console.log(`${a}: 네!`);
+          // console.log(rollBook[i] + ': 네!');
+        } else {
+          console.log(`${a}: ...`);
+          // console.log(rollBook[i] + ': ...');
+        }
+      });
+
+      //2
+      // 2단부터 9단까지 곱셈 결과 부분만 출력하는 구구단 계산기
+      var num = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+      var dan = [2, 3, 4, 5, 6, 7, 8, 9];
+
+      dan.forEach(function (a, i) {
+        console.log(`---${a}단---`);
+        num.forEach(function (b) {
+          console.log(a * b);
+        });
+      });
+
+      for (let d = 2; d < 10; d++) {
+        for (let n = 1; n < 10; n++) {
+          console.log(d * n);
+        }
+      }
+
+      //3
+      // var b //이전
+      // var new//새
+      function average(scores, newScore) {
+        // scores에는 이전 점수들의 배열, newScore에는 새로 받은 점수를 넣으면
+        // 이전 점수들의 평균과 새 점수를 비교하여
+        // 오른 경우 "평균보다 00점 올랐습니다."를 반환
+        // 내린 경우 "평균보다 00점 내렸습니다."를 반환
+        // 같을 경우 "평균 점수와 같습니다."를 반환
+        // 절대값은 Math.abs(number) 사용
+        var sum = 0;
+        scores.forEach((a) => {
+          sum += a;
+        });
+        // for (let i = 0; i < scores.lemgth; i++) {
+        //   sum + scores[i];
+        // }
+
+        var change = newScore - sum / scores.length;
+
+        if (change > 0) {
+          console.log(`평균보다 ${change}점 올랐습니다.`);
+        } else if (change < 0) {
+          console.log(`평균보다 ${Math.abs(change)}점 내렸습니다.`);
+        } else {
+          console.log('평균 점수와 같습니다.');
+        }
+      }
+
+      average([10, 20, 30, 40, 50], 40); // "평균보다 10점 올랐습니다."
+      average([40, 40, 40], 20); // "평균보다 20점 내렸습니다."
+      average([40, 40, 40], 40); // "평균 점수와 같습니다."
+    </script>
+  </body>
+</html>
