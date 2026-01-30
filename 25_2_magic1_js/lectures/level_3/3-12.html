@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>스크롤 애니메이션</title>
+    <!-- jQuery -->
+    <script
+      src="https://code.jquery.com/jquery-3.7.1.min.js"
+      ;
+      integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+
+    <link rel="stylesheet" href="./3-12.css" />
+  </head>
+
+  <body>
+    <div class="card-bg">
+      <div class="card-box">
+        <img src="../../assets/car1.png" />
+      </div>
+      <div class="card-box">
+        <img src="../../assets/car2.png" />
+      </div>
+      <div class="card-box">
+        <img src="../../assets/car3.png" />
+      </div>
+    </div>
+
+    <script>
+      $(window).scroll(function () {
+        var scrollH = $(window).scrollTop();
+        console.log(scrollH);
+        //img1
+        var opacity1 = -0.002 * scrollH + 1.4;
+        var scale1 = -0.0002 * scrollH + 1.04;
+
+        if (scrollH < 200) {
+          scale1 = 1;
+        }
+
+        $('.card-box').eq(0).css('opacity', opacity1);
+        $('.card-box').eq(0).css('scale', scale1);
+
+        //img2
+        var opacity2 = -0.002 * scrollH + 2.4;
+        var scale2 = -0.0002 * scrollH + 1.14;
+
+        if (scrollH < 500) {
+          scale2 = 1;
+        }
+
+        $('.card-box').eq(1).css('opacity', opacity2);
+        $('.card-box').eq(1).css('scale', scale2);
+
+        //img3
+        var opacity3 = -0.00333 * scrollH + 5;
+        var scale3 = -0.000333 * scrollH + 1.4;
+
+        if (scrollH < 1200) {
+          scale3 = 1;
+        }
+
+        $('.card-box').eq(2).css('opacity', opacity3);
+        $('.card-box').eq(2).css('scale', scale3);
+      });
+
+      //img1
+      // scrollH: 200, opacity: 1, scale: 1
+      // scrollH: 700, opacity: 0, scale: 0.9
+
+      //2 700-1200
+      //3 1200-1500
+
+      // 1 = a * 200 + b;
+      // 0(0.9) = a * 700 + b;
+      // opacity = a * scrollH + b;
+      // scale = a * scrollH + b;
+    </script>
+  </body>
+</html>

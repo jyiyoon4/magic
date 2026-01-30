@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>장바구니</title>
+    <!-- jQuery -->
+    <script
+      src="https://code.jquery.com/jquery-3.7.1.min.js"
+      ;
+      integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+  </head>
+
+  <body>
+    <h3>장바구니</h3>
+    <ul id="list"></ul>
+
+    <script>
+      //수업명 대신 요소 각각 들어가야함
+      // for (
+      //   let i = 0;
+      //   i < JSON.parse(localStorage.getItem('lectures')).length - 1;
+      //   i++
+      // ) {
+      //   $('body').append(`<ul><li>수업명</li></ul>`);
+      //   $('li').eq(i).html(localStorage.getItem('lectures').eq(i));
+      // }
+
+      var lectures = JSON.parse(localStorage.getItem('lectures'));
+
+      console.log(lectures);
+      lectures.forEach((a, i) => {
+        $('#list').append(`<li>${a}</li>`);
+      });
+    </script>
+  </body>
+</html>

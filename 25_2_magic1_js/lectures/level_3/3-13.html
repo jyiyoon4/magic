@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>마우스 이벤트</title>
+    <!-- jQuery -->
+    <script
+      src="https://code.jquery.com/jquery-3.7.1.min.js"
+      ;
+      integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+
+    <link rel="stylesheet" href="./3-13.css" />
+  </head>
+
+  <body>
+    <div style="overflow: hidden">
+      <div class="slide-container">
+        <div class="slide-box">
+          <img src="../../assets/car1.png" draggable="false" />
+        </div>
+        <div class="slide-box">
+          <img src="../../assets/car2.png" draggable="false" />
+        </div>
+        <div class="slide-box">
+          <img src="../../assets/car3.png" draggable="false" />
+        </div>
+      </div>
+    </div>
+
+    <script>
+      var startX;
+      var pressed = false;
+      // var currentIdx = 0;
+
+      //마우스
+      $('img').on('mousedown', function (e) {
+        // console.log(`mousedown X: ${e.clientX} Y: ${e.clientY}`);
+        startX = e.clientX;
+        pressed = true;
+      });
+
+      $('img').on('mousemove', function (e) {
+        console.log(`mousemove X: ${startX - e.clientX}`);
+        if (pressed) {
+          $('slide-container').css(
+            'transform',
+            `translateX(-${startX - e.clientX}px)`,
+          );
+        }
+      });
+
+      $('img').on('mouseup', function (e) {
+        // console.log(startX)
+        // console.log(`mouseup X: ${e.clientX} Y: ${e.clientY}`);
+        pressed = false;
+
+        $('.slide-container').css('transition', `all 1s`);
+        setTimeout(() => {
+          $('.slide-container').css('transition', `all 0s`);
+        }, 1000);
+
+        //주로 오에서 왼으로 드래그할 때 ㄱ
+        if (startX - e.clientX >= 100) {
+          $('.slide-container').css('transform', `translateX(-100vw)`);
+        } else {
+          $('.slide-container').css('transform', `translateX(0vw)`);
+        }
+        if (e.clientX - startX >= 100) {
+          $('.slide-container').css('transform', `translateX(-100vw)`);
+        } else {
+          $('.slide-container').css('transform', `translateX(0vw)`);
+        }
+      });
+
+      //터치
+      $('img')
+        .eq(0)
+        .on('touchstart', function (e) {
+          console.log(
+            `touchstart X: ${e.touches[0].clientX}  Y: ${e.touches[0].clientY}`,
+          );
+          if (pressed) {
+            $('slide-container').css(
+              'transform',
+              `translateX(-${startX - e.clientX}px)`,
+            );
+          }
+        });
+    </script>
+  </body>
+</html>
