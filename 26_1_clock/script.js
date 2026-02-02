@@ -20,7 +20,7 @@ let colorM;
 //한번 실행
 function setup() {
   createCanvas(windowWidth, windowHeight);
-  // colorMode(RGB, 60, 60, 60, 59);
+  colorMode(RGB, 60, 60, 60, 59);
   // default_point = [windowWidth * 0.5, windowHeight * 0.5];
   angleMode(degrees);
 
@@ -34,7 +34,6 @@ function setup() {
 //화면 크기 달라질때 실행
 function windowResized() {
   resizeCanvas(windowWidth, windowHeight);
-  // default_point = [windowWidth * 0.5, windowHeight * 0.5];
   default_point = [];
   setPoint();
 }
@@ -46,7 +45,7 @@ function draw() {
   min = minute();
   h = hour();
 
-  background(0); //220>>rgb 값 3개 다 같아서 이거 하나 쓴
+  background(0); //220>>rgb 값 3개 다 같아서 (0) 하나 쓴
   colorMode(RGB, 60, 60, 60, 59);
   // ellipse(mouseX, mouseY, 50, 50); //원 그리는 거 (위치X,위치Y,너비,높이)
 
@@ -58,8 +57,10 @@ function draw() {
   );
   minChanged();
 
+  // 스타트 깃발
   // noFill();
-  fill(60, 0, 0);
+  stroke(60);
+  fill(60);
   beginShape();
   vertex(...first_point);
   vertex(first_point[0], first_point[1] - 20);
@@ -89,7 +90,7 @@ function minChanged() {
       default_point[i] - offsetX,
       default_point[i + 1] + offsetY,
     );
-    fill(0, colorM, colorM + 15);
+    fill(0, colorM, colorM + 15); //하늘
     quad(
       default_point[i],
       default_point[i + 1] + offsetY * 2,
@@ -100,7 +101,7 @@ function minChanged() {
       default_point[i] - offsetX,
       default_point[i + 1] + offsetY,
     );
-    fill(colorM + 15, 0, colorM);
+    fill(colorM + 15, 0, colorM); //부농
     quad(
       default_point[i],
       default_point[i + 1] + offsetY * 2,
@@ -125,8 +126,8 @@ function secChanged() {
   // h =
   //   hour() +
   //   (minute() + (second() + new Date().getMilliseconds() * 0.001) / 60) / 60;
-  fill(sec, 1, 1);
-  stroke(0, 0, 0);
+  fill(h, 1, 1);
+  stroke(1, 0, 1, 12);
   let jump = 100;
   // noStroke();
   let startPoint = [default_point[sec * 2], default_point[sec * 2 + 1]];
