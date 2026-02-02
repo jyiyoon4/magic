@@ -15,7 +15,7 @@ let divide = []; //array 할거면 꼭 []
 
 let sec, min, h;
 let colorM;
-// let colorS;
+let colorS;
 
 //한번 실행
 function setup() {
@@ -247,7 +247,6 @@ function setPoint() {
     abs(first_point[0] - second_point[0]) / count,
     abs(first_point[1] - second_point[1]) / count,
   ];
-  // console.log(divide)
 
   for (let i = count; i > 0; i--) {
     default_point.push(
