@@ -10,8 +10,7 @@ let third_point = [];
 let fourth_point = [];
 
 let count;
-let divide = []; //array 할거면 꼭 []
-//변마다 칸 개수>각 default_point 정하기
+let divide = []; //array 할거면 꼭 []\
 
 let sec, min, h;
 let colorM;
@@ -127,7 +126,7 @@ function secChanged() {
   //   hour() +
   //   (minute() + (second() + new Date().getMilliseconds() * 0.001) / 60) / 60;
   fill(h, 1, 1);
-  stroke(1, 0, 1, 12);
+  stroke(0, 0, 0, 12);
   let jump = 100;
   // noStroke();
   let startPoint = [default_point[sec * 2], default_point[sec * 2 + 1]];
