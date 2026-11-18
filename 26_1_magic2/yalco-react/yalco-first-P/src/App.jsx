@@ -1,35 +1,21 @@
-//컴포넌트 > 이름이 대문자로 시작해야 인식됨
+import './App.css'
+import { Routes, Route, Link } from 'react-router-dom'
 
-//
-
-import Child from './Child';
-import { ClassComp, FunctionComp, ArrowFuntionComp } from './Components';
-
-function Hello() {
-  return <h1>Hello</h1>;
-}
-
-function App() {
+const App = () => {
   return (
-    // // <h1>이러면</h1>
-    // // <h2>오류남</h2>
-
-    // <>
-    //   <h1>이러면</h1>
-    //   <h2>오류 안 남</h2>
-    // </>
-
     <>
-      <Hello />
-      <h2>World</h2>
-      <Child />
-      <ClassComp />
-      <FunctionComp />
-      <ArrowFuntionComp />
-      
+      <nav>
+        <Link to="/">Home</Link>
+        <Link to="/about">About</Link>
+        <Link to="/wrong-path">Wrong Path</Link>
+      </nav>
+      <Routes>
+        <Route path="/" element={<h2>Home Page</h2>} />
+        <Route path="/about" element={<h2>About Page</h2>} />
+        <Route path="*" element={<h2>404 - Page Not Found</h2>} />
+      </Routes>
     </>
-
-  );
+  )
 }
 
-export default App;
+export default App

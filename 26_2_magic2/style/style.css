@@ -1,0 +1,82 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* div  */
+
+#header {
+  background-color: #333;
+  color: white;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.section {
+  background-color: #f0f0f0;
+  font-size: 18px;
+}
+
+.text {
+  color: #333;
+  font-weight: normal;
+}
+
+#highlight {
+  background-color: yellow;
+  color: red;
+  font-weight: bold;
+}
+
+/* 박스모델 */
+
+.box {
+  background-color: #8fbfe1;
+  color: #000;
+  font-size: 16px;
+  font-weight: normal;
+
+  padding: 20px;
+  border: 5px solid #f2d864;
+  margin: 30px;
+
+  width: 300px;
+}
+
+h1 {
+  font-size: 24px;
+  font-weight: bold;
+  color: #333;
+}
+
+/* inline, block*/
+
+.inline {
+  display: inline;
+  background-color: #ffcccb;
+  padding: 10px;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.inline-block {
+  display: inline-block;
+  background-color: aqua;
+  padding: 10px;
+  font-size: 16px;
+  font-weight: bold;
+  width: 100px;
+}
+
+.block {
+  display: block;
+  background-color: rgb(121, 144, 98);
+  padding: 10px;
+  font-size: 16px;
+  font-weight: bold;
+  width: 200px;
+  margin-bottom: 10px;
+}

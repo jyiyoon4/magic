@@ -1,0 +1,130 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  max-width: 800px;
+  margin-inline: auto;
+}
+
+.qqq {
+  background-color: red !important;
+}
+
+.container {
+  background-color: oklch(90% 0.05 200);
+  padding-inline: 20px;
+  margin-bottom: 40px;
+}
+
+.item {
+  border: 2px solid oklch(60% 0.05 170);
+  background-color: oklch(90% 0.05 70);
+  padding: 10px;
+}
+
+.flex {
+  display: flex;
+}
+
+.dir {
+  flex-direction: column;
+}
+
+.order-1 {
+  order: 1;
+}
+
+.order-2 {
+  order: 2;
+}
+
+.order-3 {
+  order: 3;
+}
+
+.order-4 {
+  order: 4;
+}
+
+.order-5 {
+  order: 5;
+}
+
+.wrap {
+  flex-wrap: wrap;
+}
+
+.ac {
+  align-content: center;
+}
+
+.ai {
+  align-items: center;
+}
+
+.h300 {
+  height: 300px;
+}
+
+.as-1 {
+  align-self: start;
+}
+
+.as-2 {
+  align-self: center;
+}
+
+.as-3 {
+  align-self: end;
+}
+
+.as-4 {
+  align-self: stretch;
+}
+
+.as-5 {
+  align-self: baseline;
+}
+
+.gap {
+  gap: 20px;
+}
+
+.jc {
+  /* justify-content: space-between; */
+  /* justify-content: flex-start; */
+  justify-content: flex-end;
+}
+
+.grow-1 {
+  flex-grow: 1;
+}
+
+.grow-2 {
+  flex-grow: 2;
+}
+
+.shrink-1 {
+  flex-shrink: 1;
+  width: 200px;
+}
+
+.shrink-2 {
+  flex-shrink: 2;
+  width: 200px;
+}
+
+.green {
+  background-color: oklch(90% 0.2 130);
+}
+
+.basis-1 {
+  flex-basis: 300px;
+}
+
+.basis-2 {
+  flex-basis: 500px;
+}

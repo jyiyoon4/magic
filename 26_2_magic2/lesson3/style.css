@@ -1,0 +1,35 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.oklch-color1 {
+  background-color: oklch(90% 0.1 240deg);
+  text-align: justify;
+  width: 200px;
+  margin: 0 auto;
+}
+
+.oklch-color2 {
+  background-color: oklch(70% 0.25 140deg);
+  text-align: left;
+}
+.oklch-color3 {
+  background-color: oklch(40% 0.15 320deg);
+  text-align: right;
+}
+
+.example-box {
+  background-color: oklch(90% 0.1 20deg);
+  border-radius: 50%;
+  width: 150px;
+  /* margin: 10px 20px; */
+  margin-block: 20px;
+  margin-inline: 30px;
+  /* position: relative;
+  top: 30px;
+  left: 40px; */
+}
